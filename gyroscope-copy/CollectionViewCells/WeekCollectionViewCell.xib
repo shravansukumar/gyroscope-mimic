@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weekCollectionViewCell" id="gTV-IL-0wX" customClass="WeekCollectionViewCell" customModule="gyroscope_copy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-SN-EYm" userLabel="polygonView" customClass="PolygonView" customModule="gyroscope_copy" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1g-B8-Ylj" userLabel="dateLabel">
+                                <rect key="frame" x="5" y="10" width="70" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O1g-B8-Ylj" firstAttribute="leading" secondItem="vY0-SN-EYm" secondAttribute="leading" constant="5" id="NPK-xp-pHn"/>
+                            <constraint firstItem="O1g-B8-Ylj" firstAttribute="centerX" secondItem="vY0-SN-EYm" secondAttribute="centerX" id="ULZ-wl-AiO"/>
+                            <constraint firstAttribute="trailing" secondItem="O1g-B8-Ylj" secondAttribute="trailing" constant="5" id="W7b-13-DJf"/>
+                            <constraint firstItem="O1g-B8-Ylj" firstAttribute="top" secondItem="vY0-SN-EYm" secondAttribute="top" constant="10" id="vfd-lN-r8x"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vY0-SN-EYm" secondAttribute="trailing" id="OLR-hK-Va7"/>
+                <constraint firstAttribute="bottom" secondItem="vY0-SN-EYm" secondAttribute="bottom" id="Wp4-Ff-bG4"/>
+                <constraint firstItem="vY0-SN-EYm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="seH-BM-AFb"/>
+                <constraint firstItem="vY0-SN-EYm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sh7-pS-Jhp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="dateLabel" destination="O1g-B8-Ylj" id="P8v-z8-UU7"/>
+                <outlet property="polygonView" destination="vY0-SN-EYm" id="a34-Uf-79L"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
